@@ -8,6 +8,9 @@ import { HomeComponent } from './home/home.component';
 import { AllBooksComponent } from './all-books/all-books.component';
 import { AllUsersComponent } from './all-users/all-users.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { UserLoginComponent } from './user-login/user-login.component';
+import { UserRegisterComponent } from './user-register/user-register.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     HomeComponent,
     AllBooksComponent,
     AllUsersComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    AdminLoginComponent,
+    UserLoginComponent,
+    UserRegisterComponent
   ],
   imports: [
     BrowserModule,

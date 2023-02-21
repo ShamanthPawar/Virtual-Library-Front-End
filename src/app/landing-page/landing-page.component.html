@@ -6,9 +6,9 @@
       </div>
       <div class="links">
         <ul>
-          <li><a href="" data-bs-toggle="modal" data-bs-target="#adminModal">Admin</a></li>
-          <li><a href="" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
-          <li><a href="" class="button btn-teal" data-bs-toggle="modal" data-bs-target="#registerModal">Sign up</a></li>
+          <li><a routerLink="/admin-login">Admin</a></li>
+          <li><a routerLink="/user-login">Login</a></li>
+          <li><a routerLink="/user-register" class="button btn-teal">Sign up</a></li>
           <div class="bx bx-menu" ><i class="ri-menu-line" id="menu-icon"></i></div>
         </ul>
       </div>
@@ -40,43 +40,6 @@
   </section>
 </div>
 
-<!-- User Login Modal -->
-<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" style="width: 18rem;">
-    <div class="modal-content dark-bg">
-
-      <div data-bs-theme="dark" class="card dark-bg text-white" >
-        <div class="card-body">
-          <div class="modal-header border-bottom-0">
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <h4 class="card-title text-center">Login</h4>
-          <br>
-          <div>
-            <form>
-              <div class="mb-3">
-                <input type="text" class="form-control text-white" id="exampleInputEmail1" placeholder="Username" required>
-              </div>
-              <div class="mb-3">
-                <input type="password" class="form-control text-white" id="exampleInputPassword1" placeholder="Password" required>
-              </div>
-              <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Remember me</label>
-              </div>
-              <br>
-              <div class="d-grid gap-2 col-6 mx-auto">
-                <a routerLink="/home" class="btn btn-teal" type="button" data-bs-dismiss="modal">Login</a>
-              </div>
-            </form>
-          
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- User Register Modal -->
 <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" style="width: 18rem;">
@@ -103,43 +66,6 @@
               <br>
               <div class="d-grid gap-2 col-6 mx-auto">
                 <a routerLink="/home" class="btn btn-teal" type="button" data-bs-dismiss="modal">Register</a>
-              </div>
-            </form>
-          
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Admin Login Modal -->
-<div class="modal fade" id="adminModal" tabindex="-1" aria-labelledby="adminModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" style="width: 18rem;">
-    <div class="modal-content dark-bg">
-
-      <div data-bs-theme="dark" class="card dark-bg text-white" >
-        <div class="card-body">
-          <div class="modal-header border-bottom-0">
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <h4 class="card-title text-center">Admin Login</h4>
-          <br>
-          <div>
-            <form>
-              <div class="mb-3">
-                <input type="text" class="form-control text-white" id="exampleInputEmail1" placeholder="Admin ID" required>
-              </div>
-              <div class="mb-3">
-                <input type="password" class="form-control text-white" id="exampleInputPassword1" placeholder="Password" required>
-              </div>
-              <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Remember me</label>
-              </div>
-              <br>
-              <div class="d-grid gap-2 col-6 mx-auto">
-                <a routerLink="/admin" class="btn btn-teal" type="button" data-bs-dismiss="modal">Login</a>
               </div>
             </form>
           
