@@ -1,0 +1,265 @@
+<div class="big-wrapper">
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="assets/logo.png" alt="Logo">
+      </div>
+      <div class="links">
+        <ul>
+          <li><a routerLink="/admin-login">Admin</a></li>
+          <li><a routerLink="/user-login">Login</a></li>
+          <li><a routerLink="/user-register" class="button btn-teal">Sign up</a></li>
+          <div class="bx bx-menu" ><i class="ri-menu-line" id="menu-icon"></i></div>
+        </ul>
+      </div>
+      <!-- <div class="menu-links">
+        <div class="bar"></div>
+      </div> -->
+    </div>
+  </header>
+  
+  <section class="showcase-area">
+    <div class="container">
+      <div class="left">
+        <div class="big-title">
+          <h1><b>Unlimited books, novels and more.</b></h1>
+          <h1>Read anywhere, download anytime!</h1>
+        </div>
+        <p>Virtual Library with more than 100+ books covering various topics.<br>Start exploring now!</p>
+        <a href="#" class="button btn-teal" data-bs-toggle="modal" data-bs-target="#registerModal">Get started</a>
+      </div>
+      <div class="right">
+        <svg xmlns="http://www.w3.org/2000/svg" class="blob" width="774.994" height="739.486" viewBox="158.789 161.353 774.994 739.486"><defs><clipPath id="b"><path fill="currentColor" d="M883 623q-90 123-198 217.5t-241.5 41Q310 828 256.5 718T168 487.5Q133 367 231 285t215-111q117-29 252.5 8.5t205 177.5Q973 500 883 623Z"/></clipPath><filter id="a" x="-50vw" y="-50vh" width="100vw" height="100vh"><feFlood flood-color="#fff" result="neutral-gray"/><feTurbulence type="fractalNoise" baseFrequency="2.5" numOctaves="100" stitchTiles="stitch" result="noise"/><feColorMatrix in="noise" type="saturate" values="0" result="destaturatedNoise"/><feComponentTransfer in="desaturatedNoise" result="theNoise"><feFuncA type="table" tableValues="0 0 0.2 0"/></feComponentTransfer><feBlend in="SourceGraphic" in2="theNoise" mode="soft-light" result="noisy-image"/></filter></defs><g filter="url(#a)" clip-path="url(#b)"><path fill="#00e6c2" d="M883 623q-90 123-198 217.5t-241.5 41Q310 828 256.5 718T168 487.5Q133 367 231 285t215-111q117-29 252.5 8.5t205 177.5Q973 500 883 623Z"/></g></svg>
+        <img src="assets/vector.png" class="vector">
+        <!-- <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="blob">
+          <path fill="#00E6C2" d="M64.3,-45C77.9,-34.2,79.9,-7.8,71.8,11.9C63.7,31.5,45.7,44.4,27.6,50.6C9.5,56.7,-8.6,56.1,-20.4,48.2C-32.2,40.3,-37.7,25.1,-42.6,8.4C-47.4,-8.2,-51.6,-26.4,-44.4,-35.7C-37.2,-45,-18.6,-45.6,3.4,-48.3C25.3,-51,50.7,-55.8,64.3,-45Z" transform="translate(100 100)" />
+        </svg> -->
+        <!-- <div class="blob"></div> -->
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- User Register Modal -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" style="width: 18rem;">
+    <div class="modal-content">
+
+      <div data-bs-theme="dark" class="card dark-bg text-white" >
+        <div class="card-body">
+          <div class="modal-header border-bottom-0">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <h4 class="card-title text-center">Sign Up</h4>
+          <br>
+          <div>
+            <form>
+              <div class="mb-3">
+                <input type="text" class="form-control text-white" id="exampleInputEmail1" placeholder="Email address" required>
+              </div>
+              <div class="mb-3">
+                <input type="password" class="form-control text-white" id="exampleInputPassword1" placeholder="New password" required>
+              </div>
+              <!-- <div class="mb-3">
+                <input type="password" class="form-control text-info" id="exampleInputPassword1" placeholder="Confirm password" required>
+              </div> -->
+              <br>
+              <div class="d-grid gap-2 col-6 mx-auto">
+                <a routerLink="/home" class="btn btn-teal" type="button" data-bs-dismiss="modal">Register</a>
+              </div>
+            </form>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Top Wave -->
+<div class="top-wave">
+  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+  </svg>
+</div>
+
+<section class="second-section">
+  <div class="container">
+    <h3 class="text-center"><strong>Popular E-Books:</strong></h3>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="cards-wrapper">
+            <div class="card">
+              <img src="assets/books.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><strong>Book 1</strong></h5>
+                <p class="card-text">Author AAA</p>
+                <a href="#" class="btn btn-teal">Read</a>
+              </div>
+            </div>
+            <div class="card d-none d-md-block">
+              <img src="assets/users.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><strong>Book 2</strong></h5>
+                <p class="card-text">Author BBB</p>
+                <a href="#" class="btn btn-teal">Read</a>
+              </div>
+            </div>
+            <div class="card d-none d-md-block">
+              <img src="assets/books.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><strong>Book 3</strong></h5>
+                <p class="card-text">Author CCC</p>
+                <a href="#" class="btn btn-teal">Read</a>
+              </div>
+            </div>
+            <div class="card d-none d-md-block">
+              <img src="assets/users.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><strong>Book 4</strong></h5>
+                <p class="card-text">Author DDD</p>
+                <a href="#" class="btn btn-teal">Read</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="cards-wrapper">
+            <div class="card">
+              <img src="assets/books.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><strong>Book 5</strong></h5>
+                <p class="card-text">Author AAA</p>
+                <a href="#" class="btn btn-teal">Read</a>
+              </div>
+            </div>
+            <div class="card d-none d-md-block">
+              <img src="assets/users.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><strong>Book 6</strong></h5>
+                <p class="card-text">Author BBB</p>
+                <a href="#" class="btn btn-teal">Read</a>
+              </div>
+            </div>
+            <div class="card d-none d-md-block">
+              <img src="assets/books.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><strong>Book 7</strong></h5>
+                <p class="card-text">Author CCC</p>
+                <a href="#" class="btn btn-teal">Read</a>
+              </div>
+            </div>
+            <div class="card d-none d-md-block">
+              <img src="assets/books.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><strong>Book 8</strong></h5>
+                <p class="card-text">Author DDD</p>
+                <a href="#" class="btn btn-teal">Read</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="third-section">
+  <div class="container">
+    <div class="left">
+      <div class="section-title">
+        <h2><strong>Read anywhere.</strong></h2>
+      </div>
+      <p>Stream unlimited books on your phone, tablet and laptop.</p>
+    </div>
+    <div class="right">
+      <img src="assets/desktop-mobile.png" class="vector">
+    </div>
+  </div>
+</section>
+
+<section class="fourth-section">
+  <div class="container">
+    <div class="left">
+      <img src="assets/read-offline.png" class="vector">
+    </div>
+    <div class="right">
+      <div class="section-title">
+        <h2><strong>Download your books to read offline.</strong></h2>
+      </div>
+      <p>Save your favourites easily and always have something to read.</p>
+    </div>
+  </div>
+</section>
+
+<section class="FAQ text-teal">
+  <h2 class="text-center"><strong>FAQs</strong></h2>
+  <br>
+  <div class="accordion d-grid col-6 mx-auto" id="accordionExample">
+    <div class="accordion-item medium-bg">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button collapsed medium-bg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          What is Virtual Library?
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item medium-bg">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed medium-bg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          What can I read on Virtual Library?
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item medium-bg">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed medium-bg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Can I download the books?
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bottom Wave -->
+<div class="bottom-wave">
+  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+  </svg>
+</div>
+
+<footer class="text-center text-white blue-bg">
+  <div class="container p-4 pb-0">
+    <p class="d-flex justify-content-center align-items-center">
+      <span class="me-3">Register for free: </span>
+      <button class="button btn-teal" data-bs-toggle="modal" data-bs-target="#registerModal">
+        Sign up!
+      </button>
+    </p>
+  </div>
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2023 Copyright:
+    <a class="text-white" href="https://mdbootstrap.com/">www.VirtualLibrary.com</a>
+  </div>
+</footer>

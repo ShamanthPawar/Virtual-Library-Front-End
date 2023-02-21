@@ -1,0 +1,29 @@
+<p>admin-login works!</p>
+
+<div class="container">
+  <div data-bs-theme="dark" class="card dark-bg text-white" style="width: 18rem;">
+    <div class="card-body">
+      <h4 class="card-title text-center">Admin Login</h4>
+      <br>
+      <div>
+        <form>
+          <div class="mb-3">
+            <input type="text" class="form-control text-white" id="exampleInputEmail1" placeholder="Admin ID" #adminEmail required>
+          </div>
+          <div class="mb-3">
+            <input type="password" class="form-control text-white" id="exampleInputPassword1" placeholder="Password" #adminPassword required>
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Remember me</label>
+          </div>
+          <br>
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <input type="button" class="btn btn-teal" value="Login" routerLink="/admin" (click)="authenticationService.SignIn(adminEmail.value, adminPassword.value)"/>
+          </div>
+        </form>
+      
+      </div>
+    </div>
+  </div>
+</div>

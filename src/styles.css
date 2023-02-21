@@ -1,0 +1,124 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  --darkBlue: #000072;
+  --lightTeal: #00e6c2;
+  --bgColor: #f1f8fc;
+  --light1: #919191;
+  --light2: #aaa;
+  --dark1: #312f3a;
+  --dark2: #45424b;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.blue-bg {
+  background-color: #000072;
+}
+
+.dark-bg {
+  color: var(--bs-light-text);
+  background-color: var(--bs-light-bg-subtle);
+}
+
+.medium-bg {
+  color: var(--bs-light-text);
+  background-color: var(--bs-light-border-subtle);
+}
+
+.button {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  /* color: #fff !important; */
+  background-color: var(--lightTeal);
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.btn-teal,
+.btn-teal:active,
+.btn-teal:visited {
+  color: var(--darkBlue) !important;
+  background-color: var(--lightTeal);
+  /* color: var(--darkBlue); */
+}
+
+.btn-teal:hover {
+  background-color: hsl(171, 100%, 35%);
+  transform: scale(1) !important;
+}
+
+.text-teal {
+  color: var(--lightTeal);
+}
+
+input:placeholder-shown {
+  background-color: var(--bs-light-border-subtle) !important;
+  color: var(--bs-light-text);
+  border-radius: 25px;
+}
+
+input:not(:placeholder-shown) {
+  background-color: var(--bs-light-border-subtle) !important;
+  border-radius: 25px;
+}
+
+.form-control::placeholder {
+  color: var(--bs-light-text);
+}
+
+.form-control {
+  border: 0;
+}
+
+.accordion-item {
+  border-color: var(--bs-light-bg-subtle);
+}
+
+.accordion-button {
+  color: var(--bs-light-text) !important;
+  background-color: var(--bs-light-border-subtle) !important;
+  border-color: var(--bs-light-bg-subtle) !important;
+}
+
+/* .accordion-button:hover {
+  box-shadow: 0px 0px 10px 2px rgb(13, 253, 245);
+} */
+
+/* .btn:hover {
+  box-shadow: 0px 0px 10px 2px rgb(13, 253, 245);
+} */
+
+.btn {
+  border-radius: 25px;
+}
+
+/* .form-control:focus {
+  box-shadow: 0px 0px 10px 2px rgb(13, 253, 245);
+} */
+
+.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+.chip {
+  display: inline-block;
+  padding: 0 25px;
+  height: 30px;
+  font-size: 16px;
+  line-height: 30px;
+  border-radius: 25px;
+  background-color: var(--lightTeal);
+  color: var(--bs-light-border-subtle);
+}
+
+.card,
+.card:hover {
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+}
