@@ -1,0 +1,120 @@
+<!-- Header Navbar -->
+<nav class="navbar sticky-top blue-bg">
+    <div class="container-fluid">
+      <a href="/dashboard" class="navbar-brand text-teal logo">Admin Dashboard</a>
+      <div class="dropdown">
+        <button class="button btn-outline-teal dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          Admin ID
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#passwordModal"><span class="material-symbols-sharp">
+            lock
+            </span>&nbsp;&nbsp;Change password</a></li>
+          <li><a class="dropdown-item" href="#"><span class="material-symbols-sharp">
+            logout
+            </span>&nbsp;&nbsp;Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    
+  <div class="main-body">
+    <!-- Side Navbar -->
+    <div class="sidenav-content">
+      <ul class="nav-list">
+          <li class="nav-list-item" *ngFor="let item of adminSideNavItems" (click)="goTo(item.name)" [ngClass]="{'onActive': selectedMenu == item.name}">
+              <!-- <i class="{{item.icon}}" *ngIf="selectedMenu!=item.name"></i>
+              <i class="{{item.activeIcon}}" *ngIf="selectedMenu==item.name"></i> -->
+              <span class="material-symbols-sharp">
+                {{item.icon}}
+              </span>
+              <p>{{item.name}}</p>
+          </li>
+      </ul>
+    </div>
+  
+    <div class="selected-tab">
+      <div class="tab-content" *ngIf="selectedMenu=='Dashboard'">
+        <h1 class="text-center py-2 title">Dashboard</h1>
+
+        <div class="container p-4 text-center">
+          <div class="row">
+            <div class="col">
+              <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+                <div class="card-header border-bottom-0"><h5>Date</h5></div>
+                <div class="card-body">
+                  <h1 class="card-title">March 2023</h1>
+                  <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-bg-info mb-3" style="max-width: 18rem;">
+                <div class="card-header border-bottom-0"><h5>Total Books</h5></div>
+                <div class="card-body">
+                  <h1 class="card-title">21</h1>
+                  <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-bg-warning mb-3" style="max-width: 18rem;">
+                <div class="card-header border-bottom-0"><h5>Total Users</h5></div>
+                <div class="card-body">
+                  <h1 class="card-title">5</h1>
+                  <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="tab-content" *ngIf="selectedMenu=='Books'">
+        <app-all-books></app-all-books>
+      </div>
+  
+      <div class="tab-content" *ngIf="selectedMenu=='Users'">
+        <app-all-users></app-all-users>
+      </div>
+  
+      <div class="tab-content" *ngIf="selectedMenu=='Settings'">
+        <h1 class="text-center py-2 title">Settings</h1>
+      </div>
+      
+    </div>
+  </div>
+   
+  <!-- Change password Modal -->
+  <div class="modal fade" id="passwordModal" tabindex="-1" aria-labelledby="passwordModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="width: 18rem;">
+      <div class="modal-content">
+  
+        <div data-bs-theme="dark" class="card dark-bg text-white" >
+          <div class="card-body">
+            <div class="modal-header border-bottom-0">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <h4 class="card-title text-center">Change Password</h4>
+            <br>
+            <div>
+              <form>
+                <div class="mb-3">
+                  <input type="password" class="form-control text-white" id="exampleInputPassword1" placeholder="New password" required>
+                </div>
+                <div class="mb-3">
+                  <input type="password" class="form-control text-white" id="exampleInputPassword2" placeholder="Confirm password" required>
+                </div>
+                <br>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                  <a routerLink="/home" class="btn btn-teal" type="button" data-bs-dismiss="modal">Change</a>
+                </div>
+              </form>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

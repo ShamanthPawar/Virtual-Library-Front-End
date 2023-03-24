@@ -1,0 +1,33 @@
+table {
+  margin-top: 4rem;
+}
+
+/* .searchbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.searchbar,
+span {
+  display: flex-end;
+} */
+
+/* .ri-delete-bin-6-fill {
+  color: red;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.ri-pencil-fill {
+  color: var(--darkBlue);
+  font-size: 20px;
+  cursor: pointer;
+} */
+
+.action-icons {
+  display: flex;
+  align-content: center;
+  gap: 5px;
+  justify-content: center;
+  cursor: pointer;
+}

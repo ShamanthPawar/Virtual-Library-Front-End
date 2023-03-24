@@ -1,50 +1,158 @@
-<div class="dark-bg">
+<h1 class="text-center title p-2">All Books</h1>
 
-    <h1 class="text-center">All Books</h1>
+<div class="container-fluid d-flex col-5 navbar-center p-2">
+  <div class="input-group">
+    <input class="form-control" type="search" placeholder="Search books" aria-label="Search" [(ngModel)]="searchtext">
+    <span class="btn btn-teal" type="submit">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 17 17">
+        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+      </svg>
+    </span>
+  </div>
+  &nbsp;&nbsp;
+  <button class="btn btn-teal" data-bs-toggle="modal" data-bs-target="#addBookModal">+&nbsp;Add&nbsp;Book&nbsp;</button>
+</div>
 
-    <div class="container-fluid">
-      <div class="d-grid col-4 navbar-center">
-      <form class="d-flex input-group" role="search">
-        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-        <span class="btn btn-teal" type="submit">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 17 17">
-            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-          </svg>
-        </span>
-      </form>
+<div class="d-grid gap-2 col-8 mx-auto">
+  <!-- <div class="searchbar d-flex col-2 navbar-center p-2 input-group">
+    <input class="form-control" type="text" name="search" [(ngModel)]="searchtext" autocomplete="off" placeholder="&#61442;  Start searching for a hero by id or name or country">
+    <span class="btn btn-teal" type="submit">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 17 17">
+        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+      </svg>
+    </span>  
+  </div> -->
+  <table class="table text-center">
+    <thead>
+      <tr>
+        <th scope="col">Sl no.</th>
+        <th scope="col">Book ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Author</th>
+        <th scope="col">Publisher</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of bookList | filter:searchtext; let i=index;">
+        <th scope="row">{{i+1}}</th>
+        <td>{{book.bookID}}</td>
+        <td>{{book.bookName}}</td>
+        <td>{{book.authorName}}</td>
+        <td>{{book.publisher}}</td>
+        <td class="action-icons">
+          <a data-bs-toggle="modal" data-bs-target="#editBookModal"><span class="material-symbols-sharp">
+            edit
+            </span></a> | <a data-bs-toggle="modal" data-bs-target="#deleteBookModal"><span class="material-symbols-sharp">
+              delete
+              </span></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Add Book Modal -->
+<div class="modal fade" id="addBookModal" tabindex="-1" aria-labelledby="addBookModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addUserModalLabel">Add New Book</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="row mb-3">
+            <label for="inputTitle" class="col-sm-3 col-form-label">Title</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="inputTitle">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputAuthor" class="col-sm-3 col-form-label">Author</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="inputAuthor">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputPublisher" class="col-sm-3 col-form-label">Publisher</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="inputPublisher">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="formFile" class="col-sm-3 col-form-label">Add pdf</label>
+            <div class="col-sm-8">
+              <input type="file" class="form-control" id="formFile">
+            </div>
+          </div>
+          <br>
+          <div class="d-grid gap-2 col-3 mx-auto">
+            <a class="btn btn-teal" type="button" data-bs-dismiss="modal">Add</a>
+          </div>
+        </form>
+      </div>
     </div>
+  </div>
+</div>
+
+<!-- Edit Book Modal -->
+<div class="modal fade" id="editBookModal" tabindex="-1" aria-labelledby="editBookModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editBookModalLabel">Edit Book Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="row mb-3">
+            <label for="inputTitle" class="col-sm-3 col-form-label">Title</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="inputTitle">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputAuthor" class="col-sm-3 col-form-label">Author</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="inputAuthor">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputPublisher" class="col-sm-3 col-form-label">Publisher</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="inputPublisher">
+            </div>
+          </div>
+          <br>
+          <div class="d-grid gap-2 col-3 mx-auto">
+            <a class="btn btn-teal" type="button" data-bs-dismiss="modal">Save</a>
+          </div>
+        </form>
+      </div>
     </div>
-<br><br>
-    <div class="d-grid gap-2 col-6 mx-auto">
-    <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">Book ID</th>
-            <th scope="col">Book Name</th>
-            <th scope="col">Author Name</th>
-            <th scope="col">Year of Publication</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">BK1</th>
-            <td>Aaa</td>
-            <td>aaa@cognizant.com</td>
-            <td>2018</td>
-          </tr>
-          <tr>
-            <th scope="row">BK2</th>
-            <td>Bbb</td>
-            <td>bbb@cognizant.com</td>
-            <td>2021</td>
-          </tr>
-          <tr>
-            <th scope="row">BK3</th>
-            <td>Ccc</td>
-            <td>ccc@cognizant.com</td>
-            <td>2015</td>
-          </tr>
-        </tbody>
-      </table>
+  </div>
+</div>
+
+<!-- Delete Book Modal -->
+<div class="modal fade" id="deleteBookModal" tabindex="-1" aria-labelledby="deleteBookModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteBookModalLabel">Delete Book</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body border-bottom-0">
+        <div class="d-grid gap-2 col-8 mx-auto">
+          Are you sure you want to delete the book with title: '{{bookList[0]}}'?
+        </div>
+      </div>
+      <div class="modal-footer border-top-0">
+        <div class="d-flex gap-2 mx-auto">
+          <a class="btn btn-danger" type="button" data-bs-dismiss="modal">&nbsp;&nbsp;Yes&nbsp;&nbsp;</a>
+          <a class="btn btn-teal" type="button" data-bs-dismiss="modal">&nbsp;&nbsp;No&nbsp;&nbsp;</a>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

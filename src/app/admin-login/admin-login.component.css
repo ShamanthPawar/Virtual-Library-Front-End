@@ -4,3 +4,25 @@
   align-items: center;
   justify-content: center;
 }
+
+.button {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  /* color: #fff !important; */
+  background-color: var(--lightTeal);
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.btn-teal,
+.btn-teal:active,
+.btn-teal:visited {
+  color: var(--darkBlue) !important;
+  background-color: var(--lightTeal);
+  /* color: var(--darkBlue); */
+}
+
+.btn-teal:hover {
+  background-color: hsl(171, 100%, 35%);
+  transform: scale(1) !important;
+}
